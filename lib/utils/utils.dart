@@ -949,7 +949,7 @@ class _DropdownButtonState<T> extends State<CustomDropdownButton<T>>
   }
 
   TextStyle? get _textStyle =>
-      widget.style ?? Theme.of(context).textTheme.subtitle1;
+      widget.style ?? Theme.of(context).textTheme.labelSmall;
 
   void _handleTap() {
     final textDirection = Directionality.maybeOf(context);
