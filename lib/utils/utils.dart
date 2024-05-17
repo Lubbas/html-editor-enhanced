@@ -1009,7 +1009,7 @@ class _DropdownButtonState<T> extends State<CustomDropdownButton<T>>
 
   double get _denseButtonHeight {
     final fontSize = _textStyle!.fontSize ??
-        Theme.of(context).textTheme.subtitle1!.fontSize!;
+        Theme.of(context).textTheme.labelSmall!.fontSize!;
     return max(fontSize, max(widget.iconSize, _kDenseButtonHeight));
   }
 
