@@ -9,7 +9,8 @@ import 'package:html_editor_enhanced/utils/utils.dart';
 // ignore: avoid_web_libraries_in_flutter
 // ignore: undefined_prefixed_name
 import 'dart:html' as html;
-import 'dart:ui_web' as ui;
+// ignore: undefined_prefixed_name
+import 'dart:ui' show platformViewRegistry;
 
 /// The HTML Editor widget itself, for web (uses IFrameElement)
 class HtmlEditorWidget extends StatefulWidget {
@@ -532,7 +533,7 @@ class _HtmlEditorWidgetWebState extends State<HtmlEditorWidget> {
         html.window.postMessage(jsonStr2, '*');
       });
     // ignore: undefined_prefixed_name
-    ui.platformViewRegistry
+    platformViewRegistry
         .registerViewFactory(createdViewId, (int viewId) => iframe);
     setState(mounted, this.setState, () {
       summernoteInit = Future.value(true);
